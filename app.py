@@ -50,7 +50,7 @@ def moviesOnDate():
 @app.route('/getTimings', methods = ['POST'])
 def timingsForMovie():
 	date = request.form['date']
-	movieID = request.form['movieID']
+	movieID = request.form['movieID and time']
 	movieType = request.form['type']
 
 	res = runQuery("SELECT time FROM shows WHERE Date='"+date+"' and movie_id = "+movieID+" and type ='"+movieType+"'")
